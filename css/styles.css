@@ -1993,6 +1993,125 @@ ul, ol {
   transform: translateY(-2px);
 }
 
+.form-gmail-option {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn-gmail-direct {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #DDD;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-gmail-direct:hover {
+  background: rgba(234, 67, 53, 0.16);
+  border-color: #EA4335;
+  color: #FFF;
+  transform: translateY(-1px);
+}
+
+.form-feedback-box {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  animation: formFeedbackFadeIn 0.35s ease;
+}
+
+@keyframes formFeedbackFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback-status-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--mustard);
+  margin-bottom: 6px;
+}
+
+.feedback-status-desc {
+  font-size: 0.82rem;
+  color: #BBB;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.feedback-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.feedback-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.feedback-action-btn.btn-reopen {
+  background: var(--terracotta);
+  color: #FFF;
+}
+
+.feedback-action-btn.btn-reopen:hover {
+  background: var(--mustard);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.feedback-action-btn.btn-gmail {
+  background: #EA4335;
+  color: #FFF;
+}
+
+.feedback-action-btn.btn-gmail:hover {
+  background: #D33828;
+  transform: translateY(-1px);
+}
+
+.feedback-action-btn.btn-copy-body {
+  background: rgba(255, 255, 255, 0.1);
+  color: #EEE;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feedback-action-btn.btn-copy-body:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #FFF;
+  transform: translateY(-1px);
+}
+
 /* Footer Bottom Strip */
 .footer-bottom {
   display: flex;
