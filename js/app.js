@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initArtLightbox();
   initEmailCopy();
   initVietnamClock();
-  initContactForm();
   initServiceInquiryTriggers();
   initMobileNavigation();
   initHeaderScroll();
@@ -154,102 +153,18 @@ function initVietnamClock() {
 }
 
 /* --------------------------------------------------------------------------
-   8. Tự Động Chọn Chủ Đề Liên Hệ từ Các Thẻ Dịch Vụ
+   8. Cuộn Đến Mục Liên Hệ từ Các Thẻ Dịch Vụ
    -------------------------------------------------------------------------- */
 function initServiceInquiryTriggers() {
   const buttons = document.querySelectorAll('[data-inquire-topic]');
-  const topicSelect = document.getElementById('inquiryTopic');
   const contactSection = document.getElementById('contact');
-  const messageBox = document.getElementById('userMessage');
-
-  if (!buttons.length || !topicSelect) return;
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const topic = btn.getAttribute('data-inquire-topic');
-      if (topic) {
-        topicSelect.value = topic;
-      }
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' });
       }
-      if (messageBox) {
-        setTimeout(() => messageBox.focus(), 600);
-      }
     });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   9. Xử Lý Gửi Biểu Mẫu Liên Hệ & Chuyển Tiếp Tới Email (Mail Redirect)
-   -------------------------------------------------------------------------- */
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-
-  const submitBtn = document.getElementById('submitFormBtn') || form.querySelector('.form-submit-btn');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    const nameInput = document.getElementById('userName');
-    const emailInput = document.getElementById('userEmail');
-    const topicSelect = document.getElementById('inquiryTopic');
-    const messageInput = document.getElementById('userMessage');
-
-    const userName = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Bạn đọc quan tâm';
-    const userEmail = emailInput && emailInput.value.trim() ? emailInput.value.trim() : 'Chưa cung cấp';
-    const topicText = topicSelect && topicSelect.options[topicSelect.selectedIndex] ? topicSelect.options[topicSelect.selectedIndex].text : 'Trao đổi Nghệ thuật';
-    const userMessage = messageInput && messageInput.value.trim() ? messageInput.value.trim() : '';
-
-    const recipient = 'maiilinh61@gmail.com';
-    const subject = `[Portfolio] Lời nhắn từ ${userName} - ${topicText}`;
-    const body = 
-`Chào Mai Linh,
-
-Tôi gửi lời nhắn liên hệ từ website Portfolio của bạn:
-
-• Họ và Tên: ${userName}
-• Email liên hệ: ${userEmail}
-• Lĩnh vực quan tâm: ${topicText}
-
-• Nội dung tin nhắn:
-${userMessage}
-
----
-Thư gửi từ biểu mẫu Portfolio Trần Mai Linh (Linh)`;
-
-    const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    const originalText = submitBtn ? submitBtn.textContent : 'Gửi Lời Nhắn ✉️';
-
-    if (submitBtn) {
-      submitBtn.textContent = 'Đang mở hòm thư... 🕊️';
-      submitBtn.disabled = true;
-    }
-
-    // Kích hoạt chuyển tiếp trực tiếp tới ứng dụng Email
-    window.location.href = mailtoUrl;
-
-    showToast(`Đang chuyển hướng tới Email của ${userName}! ✉️`, '💌');
-
-    setTimeout(() => {
-      if (submitBtn) {
-        submitBtn.textContent = 'Đã mở hòm thư gửi lời nhắn ✓';
-      }
-    }, 800);
-
-    setTimeout(() => {
-      if (submitBtn) {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }
-      form.reset();
-    }, 2800);
   });
 }
 

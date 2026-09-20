@@ -1741,9 +1741,14 @@ ul, ol {
 
 .footer-top-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 70px;
-  margin-bottom: 80px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.footer-intro-col {
+  max-width: 580px;
 }
 
 .footer-heading {
@@ -1765,7 +1770,7 @@ ul, ol {
   color: #BBB;
   line-height: 1.7;
   max-width: 520px;
-  margin-bottom: 36px;
+  margin-bottom: 0;
 }
 
 /* Direct Contact Buttons */
@@ -1912,85 +1917,6 @@ ul, ol {
   background: var(--terracotta);
   color: #FFF;
   border-color: var(--terracotta);
-}
-
-/* Interactive Contact Form */
-.contact-form-card {
-  background: #272727;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-xl);
-  padding: 40px;
-  box-shadow: var(--shadow-lg);
-}
-
-.form-title {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #FFF;
-  margin-bottom: 8px;
-}
-
-.form-sub {
-  font-size: 0.88rem;
-  color: #AAA;
-  margin-bottom: 24px;
-}
-
-.form-group {
-  margin-bottom: 18px;
-}
-
-.form-label {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #CCC;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-}
-
-.form-input,
-.form-select,
-.form-textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: var(--radius-md);
-  background: #1B1B1B;
-  border: 1px solid #3E3E3E;
-  color: #FFF;
-  font-size: 0.95rem;
-  transition: border-color var(--transition-fast);
-}
-
-.form-input:focus,
-.form-select:focus,
-.form-textarea:focus {
-  border-color: var(--mustard);
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 110px;
-}
-
-.form-submit-btn {
-  width: 100%;
-  padding: 14px;
-  border-radius: var(--radius-full);
-  background: var(--terracotta);
-  color: #FFF;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: all var(--transition-fast);
-  margin-top: 8px;
-}
-
-.form-submit-btn:hover {
-  background: var(--mustard);
-  color: var(--text-primary);
-  transform: translateY(-2px);
 }
 
 /* Footer Bottom Strip */
