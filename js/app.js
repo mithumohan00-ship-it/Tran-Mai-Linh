@@ -188,10 +188,15 @@ function initContactForm() {
   if (!form) return;
 
   const submitBtn = document.getElementById('submitFormBtn') || form.querySelector('.form-submit-btn');
-  const gmailDirectBtn = document.getElementById('submitGmailBtn');
-  const feedbackBox = document.getElementById('formFeedbackBox');
 
-  const buildMailData = () => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
     const nameInput = document.getElementById('userName');
     const emailInput = document.getElementById('userEmail');
     const topicSelect = document.getElementById('inquiryTopic');
@@ -220,101 +225,32 @@ ${userMessage}
 Thư gửi từ biểu mẫu Portfolio Trần Mai Linh (Linh)`;
 
     const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    return { userName, userEmail, topicText, userMessage, recipient, subject, body, mailtoUrl, gmailUrl };
-  };
-
-  const renderFeedback = (mailData) => {
-    if (!feedbackBox) return;
-
-    feedbackBox.style.display = 'block';
-    feedbackBox.innerHTML = `
-      <div class="feedback-status-title">
-        <span>✓</span> Đang chuyển tiếp thông tin tới hòm thư...
-      </div>
-      <p class="feedback-status-desc">
-        Hòm thư đã được chuẩn bị sẵn nội dung gửi tới <strong>${mailData.recipient}</strong>. Bạn chỉ cần bấm nút <em>"Gửi" (Send)</em> trong ứng dụng thư để hoàn tất:
-      </p>
-      <div class="feedback-btn-group">
-        <a href="${mailData.mailtoUrl}" class="feedback-action-btn btn-reopen" id="reopenMailLink">
-          <span>✉️</span> Mở lại Ứng dụng Mail
-        </a>
-        <a href="${mailData.gmailUrl}" target="_blank" rel="noopener noreferrer" class="feedback-action-btn btn-gmail" id="openGmailLink">
-          <span>🌐</span> Mở bằng Gmail Web
-        </a>
-        <button type="button" class="feedback-action-btn btn-copy-body" id="copyMailBodyBtn">
-          <span>📋</span> Sao Chép Nội Dung Thư
-        </button>
-      </div>
-    `;
-
-    // Gắn sự kiện sao chép nội dung thư
-    const copyBodyBtn = document.getElementById('copyMailBodyBtn');
-    if (copyBodyBtn) {
-      copyBodyBtn.addEventListener('click', () => {
-        navigator.clipboard.writeText(mailData.body).then(() => {
-          showToast('Đã sao chép nội dung thư vào bộ nhớ tạm! 📋', '✅');
-        }).catch(() => {
-          showToast('Vui lòng chọn và sao chép thủ công.', 'ℹ️');
-        });
-      });
-    }
-  };
-
-  // 1. Gửi qua Mail Client mặc định (mailto) khi submit form
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    const mailData = buildMailData();
+    const originalText = submitBtn ? submitBtn.textContent : 'Gửi Lời Nhắn ✉️';
 
     if (submitBtn) {
       submitBtn.textContent = 'Đang mở hòm thư... 🕊️';
       submitBtn.disabled = true;
     }
 
-    // Hiển thị khung phản hồi & tùy chọn
-    renderFeedback(mailData);
+    // Kích hoạt chuyển tiếp trực tiếp tới ứng dụng Email
+    window.location.href = mailtoUrl;
 
-    // Kích hoạt mailto redirect
-    const mailLink = document.createElement('a');
-    mailLink.href = mailData.mailtoUrl;
-    document.body.appendChild(mailLink);
-    mailLink.click();
-    mailLink.remove();
-
-    showToast(`Đang chuyển hướng tới Email của ${mailData.userName}! ✉️`, '💌');
+    showToast(`Đang chuyển hướng tới Email của ${userName}! ✉️`, '💌');
 
     setTimeout(() => {
       if (submitBtn) {
         submitBtn.textContent = 'Đã mở hòm thư gửi lời nhắn ✓';
+      }
+    }, 800);
+
+    setTimeout(() => {
+      if (submitBtn) {
+        submitBtn.textContent = originalText;
         submitBtn.disabled = false;
       }
-    }, 1200);
+      form.reset();
+    }, 2800);
   });
-
-  // 2. Mở trực tiếp trên Gmail Web khi bấm nút Gmail
-  if (gmailDirectBtn) {
-    gmailDirectBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-
-      const mailData = buildMailData();
-      renderFeedback(mailData);
-
-      window.open(mailData.gmailUrl, '_blank', 'noopener,noreferrer');
-      showToast('Đang mở trang soạn thư Gmail trên trình duyệt... 🌐', '✉️');
-    });
-  }
 }
 
 /* --------------------------------------------------------------------------
