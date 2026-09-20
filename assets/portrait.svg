@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%" aria-label="Portrait illustration of Trần Mai Linh (Linh)">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5ECE2"/>
+      <stop offset="50%" stop-color="#EEDFD0"/>
+      <stop offset="100%" stop-color="#E3CFBD"/>
+    </linearGradient>
+    <linearGradient id="warmSun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAB676" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#C85A32" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="sweaterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D96B43"/>
+      <stop offset="100%" stop-color="#B24924"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#553A26" flood-opacity="0.12"/>
+    </filter>
+    <clipPath id="portraitClip">
+      <rect x="25" y="25" width="450" height="550" rx="36" ry="36"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background Base -->
+  <g clip-path="url(#portraitClip)">
+    <rect x="0" y="0" width="500" height="600" fill="url(#bgGrad)"/>
+
+    <!-- Artistic paint washes & shapes in background -->
+    <circle cx="390" cy="140" r="130" fill="url(#warmSun)"/>
+    <path d="M-20,180 C60,120 180,140 210,230 C240,320 120,380 40,360 C-40,340 -60,240 -20,180 Z" fill="#6B7F5E" opacity="0.18"/>
+    <path d="M320,380 C390,340 480,360 490,440 C500,520 410,560 340,540 C270,520 250,420 320,380 Z" fill="#DDA74F" opacity="0.18"/>
+
+    <!-- Botanical leaf silhouettes -->
+    <g fill="#6B7F5E" opacity="0.35">
+      <path d="M410,280 Q430,220 480,210 Q450,250 430,285 Z"/>
+      <path d="M430,285 Q470,260 500,280 Q460,300 435,290 Z"/>
+      <path d="M50,110 Q80,80 130,90 Q90,120 60,125 Z"/>
+      <path d="M60,125 Q110,130 130,160 Q80,155 55,130 Z"/>
+    </g>
+
+    <!-- Character Body / Knit Sweater -->
+    <!-- Shoulders -->
+    <path d="M110,430 C150,380 200,370 250,370 C300,370 350,380 390,430 C435,480 450,560 455,600 L45,600 C50,560 65,480 110,430 Z" fill="url(#sweaterGrad)" filter="url(#softShadow)"/>
+    
+    <!-- Turtleneck collar -->
+    <path d="M195,340 C195,325 215,320 250,320 C285,320 305,325 305,340 C305,365 295,395 250,395 C205,395 195,365 195,340 Z" fill="#B24924"/>
+    <path d="M205,335 C220,345 280,345 295,335" stroke="#873516" stroke-width="2.5" fill="none"/>
+    <path d="M210,355 C225,365 275,365 290,355" stroke="#873516" stroke-width="2.5" fill="none"/>
+    
+    <!-- Neck -->
+    <path d="M215,260 L215,335 C230,345 270,345 285,335 L285,260 Z" fill="#F0C3A2"/>
+    <path d="M215,280 C235,305 265,305 285,280 L285,300 C265,320 235,320 215,300 Z" fill="#E2B18E" opacity="0.5"/>
+
+    <!-- Hair Back -->
+    <path d="M155,230 C140,310 160,390 195,430 L160,430 C125,370 120,280 145,180 Z" fill="#1A1918"/>
+    <path d="M345,230 C360,310 340,390 305,430 L340,430 C375,370 380,280 355,180 Z" fill="#1A1918"/>
+
+    <!-- Face Shape -->
+    <path d="M175,190 C175,285 200,325 250,325 C300,325 325,285 325,190 C325,130 300,105 250,105 C200,105 175,130 175,190 Z" fill="#FEDBC0"/>
+
+    <!-- Ears -->
+    <circle cx="173" cy="205" r="16" fill="#F4C5A3"/>
+    <circle cx="327" cy="205" r="16" fill="#F4C5A3"/>
+    <!-- Palette / Pearl Earring -->
+    <circle cx="173" cy="225" r="5" fill="#DDA74F"/>
+    <circle cx="327" cy="225" r="5" fill="#C85A32"/>
+
+    <!-- Eyes and Eyebrows -->
+    <!-- Soft friendly eyes -->
+    <path d="M205,185 Q220,178 232,185" stroke="#251F1C" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="218" cy="192" r="6" fill="#251F1C"/>
+    <circle cx="219" cy="190" r="2" fill="#FFF"/>
+
+    <path d="M268,185 Q280,178 295,185" stroke="#251F1C" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="282" cy="192" r="6" fill="#251F1C"/>
+    <circle cx="283" cy="190" r="2" fill="#FFF"/>
+
+    <!-- Eyebrows -->
+    <path d="M202,170 Q218,162 234,171" stroke="#251F1C" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M266,171 Q282,162 298,170" stroke="#251F1C" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Chic Round Glasses -->
+    <circle cx="218" cy="190" r="25" fill="none" stroke="#684A36" stroke-width="3"/>
+    <circle cx="282" cy="190" r="25" fill="none" stroke="#684A36" stroke-width="3"/>
+    <path d="M243,188 C247,185 253,185 257,188" stroke="#684A36" stroke-width="3" fill="none"/>
+    <path d="M193,188 L175,184" stroke="#684A36" stroke-width="2.5"/>
+    <path d="M307,188 L325,184" stroke="#684A36" stroke-width="2.5"/>
+
+    <!-- Soft Nose -->
+    <path d="M250,188 C252,205 246,218 250,222 C253,225 257,224 259,222" stroke="#DDA182" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Warm Cheerful Smile -->
+    <path d="M228,245 Q250,268 272,245" stroke="#C85A32" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <!-- Gentle Blush -->
+    <ellipse cx="198" cy="225" rx="14" ry="8" fill="#F6A896" opacity="0.5"/>
+    <ellipse cx="302" cy="225" rx="14" ry="8" fill="#F6A896" opacity="0.5"/>
+
+    <!-- Hair Front & Bangs -->
+    <path d="M165,180 C160,100 205,80 250,80 C300,80 340,100 335,180 C325,120 295,110 250,110 C205,110 175,120 165,180 Z" fill="#24211F"/>
+    <!-- Playful Bangs & Strands -->
+    <path d="M175,120 C200,105 235,125 245,150 C235,125 210,115 185,125 Z" fill="#1C1A18"/>
+    <path d="M245,115 C265,108 300,120 315,145 C295,125 270,118 245,115 Z" fill="#1C1A18"/>
+    <path d="M165,170 C160,220 170,260 175,280 C170,250 162,210 168,170 Z" fill="#24211F"/>
+    <path d="M335,170 C340,220 330,260 325,280 C330,250 338,210 332,170 Z" fill="#24211F"/>
+
+    <!-- Artist Paint Brush tucked in hair or floating -->
+    <g transform="translate(295, 75) rotate(35)">
+      <rect x="0" y="0" width="8" height="90" rx="3" fill="#A86F44"/>
+      <rect x="-1" y="25" width="10" height="15" rx="1" fill="#C5C3BC"/>
+      <path d="M-1,0 Q4,-18 9,0 Z" fill="#C85A32"/>
+    </g>
+
+    <!-- Paint Daub Accents on Canvas -->
+    <circle cx="85" cy="460" r="14" fill="#C85A32" opacity="0.85"/>
+    <circle cx="105" cy="485" r="9" fill="#DDA74F" opacity="0.9"/>
+    <circle cx="75" cy="500" r="11" fill="#6B7F5E" opacity="0.85"/>
+
+    <!-- Subtle Artist Palette Pin on Sweater -->
+    <g transform="translate(160, 480)">
+      <path d="M0,15 C0,6.7 6.7,0 15,0 C23.3,0 30,6.7 30,15 C30,20 26,24 23,26 C20,28 20,32 23,34 C25,36 25,40 22,42 C18,45 8,42 4,32 C1,25 0,20 0,15 Z" fill="#F4EADB" stroke="#684A36" stroke-width="1.5"/>
+      <circle cx="10" cy="12" r="2.5" fill="#C85A32"/>
+      <circle cx="20" cy="12" r="2.5" fill="#DDA74F"/>
+      <circle cx="12" cy="22" r="2.5" fill="#6B7F5E"/>
+    </g>
+
+    <!-- Overlay Paper Texture Border -->
+    <rect x="25" y="25" width="450" height="550" rx="36" ry="36" fill="none" stroke="#251F1C" stroke-width="4"/>
+  </g>
+
+  <!-- Washi Tape decorative element top center -->
+  <g transform="translate(190, 8) rotate(-2)">
+    <rect x="0" y="0" width="120" height="34" fill="#EAD9C6" opacity="0.9"/>
+    <path d="M0,0 L6,17 L0,34 M120,0 L114,17 L120,34" stroke="#D7C2AB" stroke-width="2" fill="none"/>
+    <line x1="15" y1="17" x2="105" y2="17" stroke="#9E856F" stroke-width="1.5" stroke-dasharray="4,4"/>
+  </g>
+</svg>

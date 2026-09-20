@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHosp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF5F4"/>
+      <stop offset="100%" stop-color="#E2EBE9"/>
+    </linearGradient>
+    <filter id="signShdw" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#243E42" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="24" fill="url(#bgHosp)"/>
+
+  <!-- Subtle architectural grid lines -->
+  <g stroke="#D0DCDA" stroke-width="1" stroke-dasharray="4,4" opacity="0.6">
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/>
+    <line x1="700" y1="0" x2="700" y2="500"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+  </g>
+
+  <!-- Wall Wayfinding Signage Mockup (Main Feature) -->
+  <g transform="translate(140, 75)" filter="url(#signShdw)">
+    <!-- Metal Backplate / Wall Panel -->
+    <rect x="0" y="0" width="360" height="280" rx="16" fill="#FFFFFF" stroke="#D3E0DD" stroke-width="2"/>
+    
+    <!-- Top Brand Header Bar -->
+    <rect x="0" y="0" width="360" height="70" rx="16" fill="#38545A"/>
+    <rect x="0" y="54" width="360" height="16" fill="#38545A"/>
+    
+    <!-- Lotus Medical Emblem -->
+    <g transform="translate(30, 20)">
+      <!-- Lotus Petal Cross -->
+      <path d="M15,5 C15,0 20,0 20,5 C20,15 15,25 15,25 C15,25 10,15 10,5 C10,0 15,0 15,5 Z" fill="#E89B7B"/>
+      <path d="M5,15 C0,15 0,10 5,10 C15,10 25,15 25,15 C25,15 15,20 5,20 C0,20 0,15 5,15 Z" fill="#7B9B88"/>
+      <circle cx="15" cy="15" r="3" fill="#FFF"/>
+    </g>
+    <text x="65" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" letter-spacing="1">BẠCH MAI LOTUS</text>
+    <text x="65" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#B2CBC5" letter-spacing="2">WELLNESS &amp; REHABILITATION</text>
+
+    <!-- Zonal Signage Rows -->
+    <!-- Row 1: Cardiology & Outpatient -->
+    <g transform="translate(24, 90)">
+      <rect width="312" height="46" rx="8" fill="#F4F8F7"/>
+      <circle cx="24" cy="23" r="14" fill="#38545A"/>
+      <!-- Heart Icon -->
+      <path d="M20,20 C18,17 22,14 24,19 C26,14 30,17 28,20 L24,25 Z" fill="#FFF"/>
+      <text x="50" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" fill="#243E42">Khoa Tim Mạch / Cardiology</text>
+      <text x="50" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#6B8884">Floor 2 • Wings A1 – A4</text>
+      <text x="290" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#38545A">→</text>
+    </g>
+
+    <!-- Row 2: Physical Therapy & Rehab -->
+    <g transform="translate(24, 146)">
+      <rect width="312" height="46" rx="8" fill="#F4F8F7"/>
+      <circle cx="24" cy="23" r="14" fill="#7B9B88"/>
+      <!-- Activity icon -->
+      <circle cx="24" cy="17" r="3" fill="#FFF"/>
+      <path d="M20,28 L24,21 L28,28" stroke="#FFF" stroke-width="2" fill="none"/>
+      <text x="50" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" fill="#243E42">Phục Hồi Chức Năng / Rehab</text>
+      <text x="50" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#6B8884">Floor 3 • Gymnasium &amp; Hydro</text>
+      <text x="290" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#7B9B88">↑</text>
+    </g>
+
+    <!-- Row 3: Pharmacy & Discharge -->
+    <g transform="translate(24, 202)">
+      <rect width="312" height="46" rx="8" fill="#F4F8F7"/>
+      <circle cx="24" cy="23" r="14" fill="#E89B7B"/>
+      <!-- Pill Cross Icon -->
+      <rect x="22" y="17" width="4" height="12" rx="2" fill="#FFF"/>
+      <rect x="18" y="21" width="12" height="4" rx="2" fill="#FFF"/>
+      <text x="50" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" fill="#243E42">Nhà Thuốc &amp; Xuất Viện / Pharmacy</text>
+      <text x="50" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#6B8884">Ground Floor • Main Atrium</text>
+      <text x="290" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#E89B7B">←</text>
+    </g>
+  </g>
+
+  <!-- Patient Care Folder & ID Badge (Right) -->
+  <g transform="translate(530, 95) rotate(5)" filter="url(#signShdw)">
+    <!-- Patient Medical Folder -->
+    <rect x="0" y="0" width="180" height="240" rx="12" fill="#FFFFFF" stroke="#E0ECE9" stroke-width="2"/>
+    <rect x="0" y="0" width="180" height="55" rx="12" fill="#38545A"/>
+    <rect x="0" y="45" width="180" height="10" fill="#38545A"/>
+    
+    <text x="20" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" fill="#FFF">Patient Care Dossier</text>
+    <text x="20" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#B2CBC5">Lotus Health Network</text>
+
+    <g transform="translate(20, 75)" fill="#6B8884" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">
+      <text x="0" y="12" font-weight="700" fill="#243E42">Hồ Sơ Điều Trị</text>
+      <text x="0" y="30">Mã BN: #HN-9824</text>
+      <text x="0" y="46">Bác sĩ: TS. Vũ Đức Trí</text>
+      <line x1="0" y1="60" x2="140" y2="60" stroke="#E0ECE9" stroke-width="1"/>
+      <circle cx="10" cy="80" r="4" fill="#7B9B88"/>
+      <text x="22" y="83">Phục hồi vận động 85%</text>
+      <circle cx="10" cy="100" r="4" fill="#7B9B88"/>
+      <text x="22" y="103">Chỉ số sinh hiệu ổn định</text>
+    </g>
+
+    <!-- Staff ID Lanyard Card overlapping -->
+    <g transform="translate(30, 150) rotate(-10)" filter="url(#signShdw)">
+      <rect x="0" y="0" width="125" height="175" rx="10" fill="#FFFFFF" stroke="#38545A" stroke-width="2"/>
+      <!-- Clip hole -->
+      <rect x="47" y="6" width="30" height="6" rx="3" fill="#888"/>
+      <circle cx="62" cy="55" r="24" fill="#E8EFF0"/>
+      <!-- Doctor silhouette -->
+      <circle cx="62" cy="50" r="10" fill="#38545A"/>
+      <path d="M47,68 C47,58 77,58 77,68 Z" fill="#38545A"/>
+      
+      <text x="62" y="94" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" fill="#243E42" text-anchor="middle">DR. NGUYEN MAI</text>
+      <text x="62" y="106" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="8" fill="#7B9B88" text-anchor="middle">Chief of Therapy</text>
+      <rect x="25" y="120" width="75" height="18" rx="4" fill="#38545A"/>
+      <text x="62" y="132" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="8" fill="#FFF" text-anchor="middle">STAFF LEVEL 1</text>
+    </g>
+  </g>
+
+  <!-- Tag Pill Overlay -->
+  <g transform="translate(40, 40)">
+    <rect width="215" height="34" rx="17" fill="#1F1F1F"/>
+    <circle cx="20" cy="17" r="5" fill="#7B9B88"/>
+    <text x="36" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12" fill="#FAF8F6">Nhận diện Y tế &amp; Biển hiệu</text>
+  </g>
+</svg>

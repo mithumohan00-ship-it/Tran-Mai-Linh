@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 90" width="100%" height="100%">
+  <!-- Artistic Handwritten Signature: Mai Linh -->
+  <g fill="none" stroke="#C85A32" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Capital M flourish -->
+    <path d="M20,58 C22,42 30,22 36,20 C42,18 44,48 48,60 C52,42 58,25 64,24 C70,23 72,50 74,62" stroke-width="2.8"/>
+    <!-- Letter a -->
+    <path d="M78,52 C76,44 86,42 90,48 C94,54 90,62 84,62 C80,62 76,56 80,48 M88,44 L92,62" stroke-width="2.4"/>
+    <!-- Letter i with dot -->
+    <path d="M98,46 L102,62" stroke-width="2.4"/>
+    <circle cx="102" cy="36" r="2.2" fill="#C85A32"/>
+
+    <!-- Capital L flourish -->
+    <path d="M128,34 C124,24 132,18 136,20 C140,24 136,44 132,58 C130,64 126,67 132,67 C140,67 148,64 154,62" stroke-width="3"/>
+    <!-- Letter i with dot -->
+    <path d="M162,46 L164,62" stroke-width="2.4"/>
+    <circle cx="164" cy="36" r="2.2" fill="#C85A32"/>
+    <!-- Letter n -->
+    <path d="M174,47 L175,62 M175,52 C178,45 190,44 190,52 L190,62" stroke-width="2.4"/>
+    <!-- Letter h with tall loop -->
+    <path d="M198,54 C196,36 202,18 206,18 C209,18 206,42 204,62 M204,50 C208,44 220,44 220,52 L220,62" stroke-width="2.5"/>
+
+    <!-- Dynamic calligraphic underline flourish -->
+    <path d="M60,74 C110,75 180,74 242,66 C252,64 260,60 256,52 C252,46 244,52 248,58" stroke-width="2.2"/>
+    <circle cx="260" cy="52" r="2.5" fill="#DDA74F"/>
+  </g>
+</svg>
