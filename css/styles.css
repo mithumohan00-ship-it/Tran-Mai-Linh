@@ -463,9 +463,9 @@ ul, ol {
 
 .hero-philosophy-lead {
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 2vw, 1.55rem);
-  font-weight: 600;
-  line-height: 1.45;
+  font-size: clamp(1.35rem, 2.3vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.35;
   color: var(--text-primary);
   margin-bottom: 18px;
 }
@@ -493,8 +493,8 @@ ul, ol {
 
 .hero-stats-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   padding-top: 28px;
   border-top: 1px solid var(--border-subtle);
 }

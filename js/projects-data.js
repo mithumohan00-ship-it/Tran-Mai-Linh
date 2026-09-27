@@ -179,7 +179,6 @@ const PROJECTS_DATA = [
     ],
     typography: "Fraunces Serif & Nét chữ viết tay thân thương Caveat",
     stats: [
-      { label: "Học viên được đồng hành", value: "350+" },
       { label: "Tỷ lệ đỗ ngành Mỹ thuật / Thiết kế", value: "100%" },
       { label: "Triển lãm & Trưng bày đã tổ chức", value: "8 Buổi" }
     ],
